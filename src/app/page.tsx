@@ -1,9 +1,3 @@
-import { fetchMetadata } from "frames.js/next";
-
-const BASE_URL =
-  process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "https://mini-app-lilac-kappa.vercel.app";
 
     export async function generateMetadata() {
       return {
