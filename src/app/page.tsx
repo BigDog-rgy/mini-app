@@ -31,6 +31,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function Page() {
+export default function Page() { // filler for vercel deploy
   return <span>Frame ready. Paste this URL in Warpcast to test.</span>;
 }
