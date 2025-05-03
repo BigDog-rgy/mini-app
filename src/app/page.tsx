@@ -13,7 +13,7 @@ export async function generateMetadata() {
       images: [imageUrl],
     },
     other: {
-      "fc:frame": "vNext",
+      "fc:frame": "next",
       "fc:frame:image": imageUrl,
       "og:image": imageUrl,
     },
