@@ -30,3 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     } as Record<string, string>,
   };
 }
+
+export default function Page() {
+  return <span>Frame ready. Paste this URL in Warpcast to test.</span>;
+}
