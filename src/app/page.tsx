@@ -1,10 +1,7 @@
-// --- app/page.tsx ---
-import { fetchMetadata } from "frames.js/next";
-
 const BASE_URL =
   process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : "https://mini-app-lilac-kappa.vercel.app/";
+    : "https://mini-app-lilac-kappa.vercel.app";
 
 export async function generateMetadata() {
   const imageUrl = `${BASE_URL}/poll.png`;
@@ -16,7 +13,7 @@ export async function generateMetadata() {
       images: [imageUrl],
     },
     other: {
-      "fc:frame": "next",
+      "fc:frame": "vNext",
       "fc:frame:image": imageUrl,
       "og:image": imageUrl,
     },

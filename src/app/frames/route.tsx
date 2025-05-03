@@ -11,8 +11,8 @@ const handleRequest = frames(async (ctx) => {
       </span>
     ),
     buttons: [
-      <Button action="post" target={{ query: { value: "Yes" } }}>Yes</Button>,
-      <Button action="post" target={{ query: { value: "No" } }}>No</Button>,
+      <Button key="yes" action="post" target={{ query: { value: "Yes" } }}>Yes</Button>,
+      <Button key="no" action="post" target={{ query: { value: "No" } }}>No</Button>,
     ],
   };
 });
