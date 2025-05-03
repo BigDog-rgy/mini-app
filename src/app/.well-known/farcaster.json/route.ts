@@ -2,7 +2,7 @@ export async function GET() {
     return new Response(
       JSON.stringify({
         frame: {
-          version: "1",
+          version: "next",
           name: "MiniPoll",
           iconUrl: "https://mini-app-lilac-kappa.vercel.app/favicon.ico",
           homeUrl: "https://mini-app-lilac-kappa.vercel.app",
