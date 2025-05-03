@@ -1,6 +1,11 @@
 export async function GET() {
     return new Response(
       JSON.stringify({
+        accountAssociation: {
+          header: "eyJmaWQiOjU0MDg5MCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDgzRDIwZDUwYTgxYTJEQkE2MTE1OTU5NDlBOTVkMWU3MDkwOTFFNjgifQ",
+          payload: "eyJkb21haW4iOiJtaW5pLWFwcC1saWxhYy1rYXBwYS52ZXJjZWwuYXBwIn0",
+          signature: "MHhmMzE5ZWNjYWMyY2JlZmFiZDU2YzJjNGRkMjM2MDJmZmZjZmI5YzE1MGFiMzA0NjE5ZDcyNWE4ODJjNDc1MmM2NWQ2ODQ4MTQzNjBmYmUwZGQzNzMxMDU1OTYxYjFiOWY4MDk2YmJmZjhkYzAwNjU5NzI3ZmY1Zjg4YmUyNDk2ODFj"
+        },
         frame: {
           version: "1",
           name: "MiniPoll",
@@ -20,8 +25,8 @@ export async function GET() {
       }),
       {
         headers: {
-          "Content-Type": "application/json"
-        }
+          "Content-Type": "application/json",
+        },
       }
     );
   }
