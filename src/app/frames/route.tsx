@@ -1,26 +1,20 @@
-/* eslint-disable react/jsx-key */
 import { Button } from "frames.js/next";
 import { frames } from "./frames";
- 
+
 const handleRequest = frames(async (ctx) => {
   return {
     image: (
       <span>
         {ctx.pressedButton
-          ? `I clicked ${ctx.searchParams.value}`
-          : `Click some button`}
+          ? `You picked: ${ctx.searchParams.value}`
+          : "Choose an option below"}
       </span>
     ),
     buttons: [
-      <Button action="post" target={{ query: { value: "Yes" } }}>
-        Say Yes
-      </Button>,
-      <Button action="post" target={{ query: { value: "No" } }}>
-        Say No
-      </Button>,
+      <Button action="post" target={{ query: { value: "Yes" } }}>Yes</Button>,
+      <Button action="post" target={{ query: { value: "No" } }}>No</Button>,
     ],
   };
 });
- 
-export const GET = handleRequest;
-export const POST = handleRequest;
+
+export { handleRequest as GET, handleRequest as POST };
