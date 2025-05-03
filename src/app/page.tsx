@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
+
 const BASE_URL =
   process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
     : "https://mini-app-lilac-kappa.vercel.app";
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
   const frame = {
     version: "next",
     imageUrl: `${BASE_URL}/poll.png`,
@@ -19,11 +21,12 @@ export async function generateMetadata() {
     },
   };
 
+  // Cast as Record<string, string> to bypass type checking on custom meta
   return {
     title: "Mini Poll Frame",
     description: "A Farcaster Frame powered by frames.js",
     other: {
-      "fc:frame": JSON.stringify(frame), // ✅ inject full JSON string
-    },
+      "fc:frame": JSON.stringify(frame),
+    } as Record<string, string>,
   };
 }
