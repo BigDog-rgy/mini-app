@@ -1,22 +1,22 @@
-import type { Metadata } from "next";
+import { fetchMetadata } from "frames.js/next";
 
 const BASE_URL =
   process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
     : "https://mini-app-lilac-kappa.vercel.app";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const imageUrl = `${BASE_URL}/api/og-image`; // you can hardcode a PNG URL here for now if needed
+    export async function generateMetadata() {
+      return {
+        title: "Mini Frame",
+        other: {
+          "fc:frame": "next",
+          "fc:frame:image": "https://mini-app-lilac-kappa.vercel.app/next.svg",
+          "og:image": "https://mini-app-lilac-kappa.vercel.app/next.svg",
+        },
+      };
+    }
+    
 
-  return {
-    title: "Mini Frame App",
-    description: "Test frame for Warpcast",
-    openGraph: {
-      images: [imageUrl],
-    },
-    other: {
-      "fc:frame": "next",
-      "fc:frame:image": imageUrl,
-    },
-  };
+export default function Page() {
+  return <span>Frame is live. Share this page link on Warpcast to test it.</span>;
 }
