@@ -4,22 +4,26 @@ const BASE_URL =
     : "https://mini-app-lilac-kappa.vercel.app";
 
 export async function generateMetadata() {
-  const imageUrl = `${BASE_URL}/poll.png`;
-
-  return {
-    title: "Mini Frame App",
-    description: "A Farcaster frame built with Next.js",
-    openGraph: {
-      images: [imageUrl],
-    },
-    other: {
-      "fc:frame": "next",
-      "fc:frame:image": imageUrl,
-      "og:image": imageUrl,
+  const frame = {
+    version: "next",
+    imageUrl: `${BASE_URL}/poll.png`,
+    button: {
+      title: "🚩 Start",
+      action: {
+        type: "launch_frame",
+        name: "MiniPoll",
+        url: `${BASE_URL}/frames`,
+        splashImageUrl: `${BASE_URL}/poll.png`,
+        splashBackgroundColor: "#f5f0ec",
+      },
     },
   };
-}
 
-export default function Page() {
-  return <span>Frame ready. Paste this URL in Warpcast to test.</span>;
+  return {
+    title: "Mini Poll Frame",
+    description: "A Farcaster Frame powered by frames.js",
+    other: {
+      "fc:frame": JSON.stringify(frame), // ✅ inject full JSON string
+    },
+  };
 }
