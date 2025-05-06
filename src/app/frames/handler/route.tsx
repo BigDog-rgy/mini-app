@@ -5,7 +5,7 @@ const handleRequest = frames(async () => {
   return {
     image: <span>🔥 Frame launched successfully!</span>,
     buttons: [
-      <Button action="post">Click me</Button>,
+      <Button key="click" action="post">Click me</Button>,
     ],
   };
 });
