@@ -9,9 +9,10 @@ export async function GET() {
         frame: {
           version: "1",
           name: "MiniPoll",
-          iconUrl: "https://mini-app-lilac-kappa.vercel.app/icon.png",
+          path: "/frames/handler",
+          iconUrl: "https://mini-app-lilac-kappa.vercel.app/poll.png",
           homeUrl: "https://mini-app-lilac-kappa.vercel.app",
-          splashImageUrl: "https://mini-app-lilac-kappa.vercel.app/splash.png",
+          splashImageUrl: "https://mini-app-lilac-kappa.vercel.app/poll.png",
           splashBackgroundColor: "#f5f0ec",
           subtitle: "Vote demo",
           description: "Try this Farcaster MiniPoll demo frame.",
