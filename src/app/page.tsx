@@ -7,22 +7,19 @@ export const metadata = {
     "fc:frame": JSON.stringify({
       version: "next",
       imageUrl: `https://mini-app-lilac-kappa.vercel.app/poll.png`,
-      buttons: [
-        {
-          title: "🚩 Start",
-          action: {
-            type: "launch_frame",
-            name: "MiniPoll",
-            url: `https://mini-app-lilac-kappa.vercel.app/frames/handler`,
-            splashImageUrl: `https://mini-app-lilac-kappa.vercel.app/poll.png`,
-            splashBackgroundColor: "#f5f0ec",
-          },
+      button: {
+        title: "🚩 Start",
+        action: {
+          type: "launch_frame",
+          name: "MiniPoll",
+          url: `https://mini-app-lilac-kappa.vercel.app/frames/handler`,
+          splashImageUrl: `https://mini-app-lilac-kappa.vercel.app/poll.png`,
+          splashBackgroundColor: "#f5f0ec",
         },
-      ],
+      },
     }),
   },
 };
-
 
 export default function Page() {
   return <ClientPage />;
