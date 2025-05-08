@@ -3,7 +3,7 @@ import { frames } from "../frames";
 
 const handleRequest = frames(async () => {
   return {
-    image: <span>🔥 Frame launched successfully!</span>,
+    image: "https://dummyimage.com/600x400/000/fff&text=Success",
     buttons: [
       <Button key="click" action="post">Click me</Button>,
     ],
