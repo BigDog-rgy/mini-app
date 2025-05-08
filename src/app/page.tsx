@@ -4,7 +4,7 @@ export const metadata = {
   title: "Mini Poll Frame",
   description: "A Farcaster Frame powered by frames.js",
   other: {
-    "fc:frame": "next",
+    "fc:frame": "vNext",
     "fc:frame:image": "https://mini-app-lilac-kappa.vercel.app/poll.png",
     "fc:frame:button:1": "🚩 Start",
     "fc:frame:button:1:action": "post",
