@@ -5,7 +5,7 @@ export const metadata = {
   description: "A Farcaster Frame powered by frames.js",
   other: {
     "fc:frame": JSON.stringify({
-      version: "vNext",
+      version: "next",
       imageUrl: `https://mini-app-lilac-kappa.vercel.app/poll.png`,
       button: {
         title: "🚩 Start",
