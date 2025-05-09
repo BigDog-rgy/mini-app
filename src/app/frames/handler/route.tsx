@@ -3,21 +3,15 @@ import { Button } from "frames.js/next";
 import { frames } from "../frames";
 
 const handleRequest = frames(async (ctx) => {
+  const clicked = Boolean(ctx.pressedButton);
+
   return {
-    image: (
-      <span>
-        Hello there: {ctx.pressedButton ? "✅" : "❌"}
-        {ctx.message?.inputText ? `, Typed: ${ctx.message?.inputText}` : ""}
-      </span>
-    ),
+    image: clicked
+      ? "https://dummyimage.com/600x400/008000/ffffff&text=You+clicked!"
+      : "https://dummyimage.com/600x400/000/fff&text=Welcome+to+the+Frame",
     buttons: [
       <Button action="post">Click me</Button>,
-      <Button action="post">
-  Next frame
-</Button>
-
     ],
-    textInput: "Type something!",
   };
 });
 
