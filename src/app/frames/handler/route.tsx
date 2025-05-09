@@ -12,9 +12,10 @@ const handleRequest = frames(async (ctx) => {
     ),
     buttons: [
       <Button action="post">Click me</Button>,
-      <Button action="post" target="/next">
-        Next frame
-      </Button>,
+      <Button action="post">
+  Next frame
+</Button>
+
     ],
     textInput: "Type something!",
   };
