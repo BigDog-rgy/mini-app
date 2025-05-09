@@ -6,10 +6,12 @@ export const metadata = {
     "fc:frame:image": "https://mini-app-lilac-kappa.vercel.app/poll.png",
     "fc:frame:image:aspect_ratio": "1.91:1",
     "fc:frame:button:1": "🚩 Start",
+    "fc:frame:button:1:title": "🚩 Start",           // ✅ explicitly include this
     "fc:frame:button:1:action": "post",
     "fc:frame:button:1:target": "https://mini-app-lilac-kappa.vercel.app/frames/handler"
   }
 };
+
 
 export default function Page() {
   return (
