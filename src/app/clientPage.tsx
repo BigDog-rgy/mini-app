@@ -1,15 +1,4 @@
-"use client";
-
-import { useEffect } from 'react';
-import { sdk } from '@farcaster/frame-sdk';
-
 export default function Page() {
-    useEffect(() => {
-      const initialize = async () => {
-        await sdk.actions.ready();
-      };
-      initialize();
-    }, []);
     return (
       <main style={{ textAlign: "center", padding: "2rem" }}>
         <h1>👋 Welcome to MiniPoll</h1>
