@@ -1,11 +1,18 @@
+/* eslint-disable react/jsx-key */
 import { Button } from "frames.js/next";
 import { frames } from "../frames";
 
-const handleRequest = frames(async () => {
+const handleRequest = frames(async (ctx) => {
   return {
-    image: "https://dummyimage.com/600x400/000/fff&text=Success",
+    image: (
+      <span>
+        {ctx.pressedButton
+          ? `✅ You pressed button index ${ctx.buttonIndex}`
+          : "🔥 Frame launched successfully!"}
+      </span>
+    ),
     buttons: [
-      <Button key="click" action="post">Click me</Button>,
+      <Button action="post">Click me</Button>,
     ],
   };
 });
