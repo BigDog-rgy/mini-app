@@ -1,15 +1,16 @@
-import { fetchMetadata } from "frames.js/next";
+export const metadata = {
+  title: "Mini Poll Frame",
+  description: "A Farcaster Frame powered by frames.js",
+  other: {
+    "fc:frame": "vNext",
+    "fc:frame:image": "https://mini-app-lilac-kappa.vercel.app/poll.png",
+    "fc:frame:image:aspect_ratio": "1.91:1",
+    "fc:frame:button:1": "🚩 Start",
+    "fc:frame:button:1:action": "post",
+    "fc:frame:button:1:target": "https://mini-app-lilac-kappa.vercel.app/frames/handler"
+  }
+};
 
-const BASE_URL = "https://mini-app-lilac-kappa.vercel.app/"
-
-export async function generateMetadata() {
-  return {
-    title: "Mini Poll Frame",
-    other: {
-      ...(await fetchMetadata(new URL("/frames/handler", BASE_URL))),
-    },
-  };
-}
 
 export default function Page() {
   return (
